@@ -66,9 +66,9 @@ jQuery(document).ready(function($){
 
 	function framesHeight(){
 		var height = $(window).innerHeight() - $('#header').outerHeight();
-
-		$('#frames').height(height - 36);
-		$('.frame.stretch iframe').height(height - 92);
+console.log(height - (parseInt($('#frames-inner').css('padding-top')) * 2));
+		$('#frames').height(height);
+		$('.frame.stretch iframe').height(height - (parseInt($('#frames-inner').css('padding-top')) * 2) - 39);
 	}
 
 	function framesReverse(){

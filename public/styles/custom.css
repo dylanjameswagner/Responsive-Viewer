@@ -57,21 +57,18 @@
 
 	form,
 	form * {
-		font-size: 18px; }
+		font-size: 16px; }
 
 	button,
 	input,
 	textarea,
 	select {
-		`border-radius: 3px;
-		padding: 4px 7px; }
+		padding: 2px 5px; }
 
 	button {
-		padding: 9px 9px;
-		`background-color: #777;
-		font-size: 18px;
-		line-height: 1;
-		`color: #fff; }
+		padding: 7px 7px;
+		font-size: 16px;
+		line-height: 1; }
 
 /* layout */
 
@@ -79,20 +76,21 @@
 		height: 100%; }
 
 	body {
-		min-width: 320px;
+		min-width: 768px;
 		background: #fff;
+		background: #fff url('../images/body.png'); /* http://subtlepatterns.com */
 		font-family: 'Open Sans',sans-serif; }
 
 
 	#header {
-		padding: 9px;
+		padding: 6px;
 		background: #ddd; }
 
 	#header-form-url {
 		float: left;
 		position: relative;
 		min-width: 50%;
-		padding-right: 110px; }
+		padding-right: 91px; }
 	#header-form-url input {
 		width: 100%; }
 	#header-form-url button {
@@ -101,18 +99,18 @@
 
 	#header-form-settings {
 		float: right;
-		margin-top: 0; padding: 0 0 0 9px; }
+		margin-top: 0; padding: 0 3px 0 9px; }
 	#header-form-settings label {
-		line-height: 32px; }
+		line-height: 31px; }
 	#header-form-settings label + label {
 		margin-left: 9px; }
 	#header-form-settings label input {
-		position: relative; top: -2px;
+		position: relative; top: -1px;
 		margin-right: 2px; }
 
 	#header-credit {
 		clear: left;
-		margin-top: 0; padding: 9px 0 0 8px; }
+		margin-top: 0; padding: 5px 0 0 3px; }
 	#header-credit a {
 		text-decoration: none; }
 	#header-credit a:hover {
@@ -154,8 +152,9 @@
 /* frames */
 
 	#frames {
-		padding: 18px; padding-left: 0;
 		overflow-x: scroll; }
 	#frames-inner {
 		height: 100%;
+		padding-top: 18px;
+		background: #fff url('../images/body.png'); /* http://subtlepatterns.com */
 		overflow: auto; }
