@@ -1,7 +1,6 @@
 # Responsive-Design-Viewer
 
-## Purpose
-A development tool used to review responsive designs in the browser.
+A tool for reviewing a sites responsive design in the browser.
 
 ## Demo
 
