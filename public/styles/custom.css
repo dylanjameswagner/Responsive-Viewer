@@ -1,0 +1,161 @@
+/* custom.css */
+/*
+
+	#000000 : black				: text
+	#ffffff : white				: background
+
+	Open Sans: 400,700
+	Open Sans Italic: 400,700
+
+*/
+/* reset */
+
+	* {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			 -o-box-sizing: border-box;
+				box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		`border: 0;
+		font: inherit;
+		line-height: inherit;
+		vertical-align: baseline; }
+
+/* fonts */
+
+	body,
+	button,
+	input,
+	textarea,
+	select {
+		font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+		font-weight: 400; }
+
+/* base */
+
+	a {
+		color: inherit; }
+
+	body {
+		min-width: 320px;
+		font-size: 10px;
+		line-height: 1.2; }
+
+	h1, h2, h3, h4, h5, h6,
+	address, p, ul, hr {
+		margin: 16px 0 0; }
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700; }
+
+	:first-child {
+		margin-top: 0; }
+
+/* forms */
+
+	form,
+	form * {
+		font-size: 18px; }
+
+	button,
+	input,
+	textarea,
+	select {
+		`border-radius: 3px;
+		padding: 4px 7px; }
+
+	button {
+		padding: 9px 9px;
+		`background-color: #777;
+		font-size: 18px;
+		line-height: 1;
+		`color: #fff; }
+
+/* layout */
+
+	html, body {
+		height: 100%; }
+
+	body {
+		min-width: 320px;
+		background: #fff;
+		font-family: 'Open Sans',sans-serif; }
+
+
+	#header {
+		padding: 9px;
+		background: #ddd; }
+
+	#header-form-url {
+		float: left;
+		position: relative;
+		min-width: 50%;
+		padding-right: 110px; }
+	#header-form-url input {
+		width: 100%; }
+	#header-form-url button {
+		position: absolute; top: 0; right: 0; }
+
+
+	#header-form-settings {
+		float: right;
+		margin-top: 0; padding: 0 0 0 9px; }
+	#header-form-settings label {
+		line-height: 32px; }
+	#header-form-settings label + label {
+		margin-left: 9px; }
+	#header-form-settings label input {
+		position: relative; top: -2px;
+		margin-right: 2px; }
+
+	#header-credit {
+		clear: left;
+		margin-top: 0; padding: 9px 0 0 8px; }
+	#header-credit a {
+		text-decoration: none; }
+	#header-credit a:hover {
+		text-decoration: underline; }
+
+/* frame */
+
+	.frame {
+		display: none;
+		float: left;
+		margin-left: 18px; padding: 0 1px 1px; }
+
+	.frame.max {}
+	.frame.min {}
+
+	.frame-title {
+		overflow: auto;
+		padding-bottom: 5px;
+		font-size: 14px;
+		line-height: 34px; }
+	.frame-title small {
+		margin-left: 5px;
+		font-weight: 400;
+		font-size: 12px; }
+	.frame-title button {
+		float: right;
+		padding: 6px 6px 7px; }
+
+	.frame iframe {
+		box-sizing: content-box;
+		display: block;
+		margin: 0 -1px -1px;
+		border: solid 1px #000; }
+
+	.frame.stretch .meta-height,
+	.frame.stretch .meta-delimiter {
+		display: none; }
+
+/* frames */
+
+	#frames {
+		padding: 18px; padding-left: 0;
+		overflow-x: scroll; }
+	#frames-inner {
+		height: 100%;
+		overflow: auto; }
