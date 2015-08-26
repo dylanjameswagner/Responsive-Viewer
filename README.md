@@ -10,6 +10,7 @@ A tool for reviewing a sites responsive design in the browser.
 - create selectable view checkboxes
 - create toggle to group views by orientation 
 - remove "Device" radiobox
+- rework scripts to reuse existing views when moving between strech and viewport modes
 
 ## Credit
 
