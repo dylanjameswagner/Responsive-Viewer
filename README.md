@@ -1,6 +1,11 @@
-# Responsive-Design-Viewer
+# Responsive Viewer
 
 A tool for reviewing a sites responsive design in the browser.
+
+## Features
+
+- Display multiple viewports side by side.
+- Works with BrowserSync
 
 ## Demo
 
