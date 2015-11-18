@@ -1,0 +1,39 @@
+{
+    "Mobile" : {
+        "device" : { "width" : 240, "height" : 320 },
+    },
+
+    // iPhone 4 320 x 480 @2x 640 x 960
+    "iPhone 4" : {
+        "device"     : { "width" : 320, "height" : 480 },
+        "Safari min" : { "width" : 320, "height" : 372 },
+        "Safari max" : { "width" : 320, "height" : 372 },
+        // "Safari min" : { "width" : 480, "height" : 212 },
+        // "Safari max" : { "width" : 480, "height" : 320 },
+    },
+
+    // iPhone 5/6 zoom 320 x 568 @2x 640 x 1136
+    "iPhone 5/6 Zoom" : {
+        "device"     : { "width" : 320, "height" : 568 },
+        "Safari min" : { "width" : 320, "height" : 460 },
+        "Safari max" : { "width" : 320, "height" : 529 },
+    },
+
+    "Galaxy S3/4/5/6" : {
+        "device" : { "width" : 360, "height" : 640 },
+    },
+
+    // iPhone 6/6 Plus zoom 375 x 667 @2x 1125 × 2001 downsampling * 0.96 = 1080 × 1920
+    "iPhone 6/6 Plus Zoom" : {
+        "device"     : { "width" : 375, "height" : 667 },
+        "Safari min" : { "width" : 375, "height" : 559 },
+        "Safari max" : { "width" : 375, "height" : 628 },
+    },
+
+    // iPhone 6 Plus 414 x 736 @3x 1242 × 2208 downsampling / 1.15 (* .8695652174) to 1080 × 1920
+    "iPhone 6 Plus" : {
+        "device"     : { "width" : 414, "height" : 736 },
+        "Safari min" : { "width" : 414, "height" : 736 },
+        "Safari max" : { "width" : 414, "height" : 736 },
+    },
+}

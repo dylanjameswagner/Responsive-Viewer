@@ -29,10 +29,9 @@
         <form id="header-form" method="post">
             <p id="header-form-url"><input type="text" placeholder="enter a url"/> <button>Reload All</button></p>
             <p id="header-form-settings">
-                <label><input type="radio"      id="stretch"    name="view"     value="stretch" checked="checked"/> Stretch</label>
-                <label><input type="radio"      id="device"     name="view"     value="device"/>                    Device</label>
-                <label><input type="radio"      id="viewport"   name="view"     value="viewport"/>                  Viewport</label>
-                <label><input type="checkbox"   id="reverse"    name="reverse"  value="reverse"/>                   Reverse</label>
+                <label><input type="radio"    id="stretch"  name="view"    value="stretch" checked="checked"/> Stretch</label>
+                <label><input type="radio"    id="viewport" name="view"    value="viewport"/>                  Viewport</label>
+                <label><input type="checkbox" id="reverse"  name="reverse" value="reverse"/>                   Reverse</label>
             </p>
         </form>
 
@@ -42,28 +41,33 @@
     <section id="frames" class="stretch">
         <div id="frames-inner">
 
-<?php /* function frame($args){ ?>
-
-            <div class="frame <?php echo $args[1]; ?>">
-                <h2 class="frame-title"><span class="meta-width"> <?php echo $args[0][0]; ?></span> <span class="meta-delimiter">×</span> <span class="meta-height"><?php echo $args[0][1]; ?></span><?php if ($args[2]): ?> <small><?php echo $args[2]; ?> <?php if ($args[1] == "viewport'): ?><span class="meta-delimiter">-</span> <?php echo $args[3]; ?><?php endif; // $args[1] == viewport ?></small><?php endif; // $args[2] ?> <button>Reload</button></h2>
-                <iframe sandbox="allow-same-origin allow-forms allow-scripts" width="<?php echo $args[0][0]; ?>" height="<?php echo $args[0][1]; ?>" seamless></iframe>
-            </div>
-
-<?php } // frame ?>
-<?php foreach ($frames as $frame): frame($frame); endforeach; */ ?>
-
+<?php include 'frames.php'; ?>
 <?php function iframe($iframe, $class){ ?>
 
             <div class="frame <?php echo $class; ?>">
-                <h2 class="frame-title"><span class="meta-width"> <?php echo $iframe[0][0]; ?></span> <span class="meta-delimiter">×</span> <span class="meta-height"><?php echo $iframe[0][1]; ?></span><?php if ($class != 'stretch' && $iframe[1]): ?> <small><?php echo $iframe[1]; ?> <?php if ($class == 'viewport'): ?><span class="meta-delimiter">-</span> <?php echo $iframe[2]; ?><?php endif; // $class == viewport ?></small><?php endif; // $iframe[1] ?> <button>Reload</button></h2>
-                <iframe sandbox="allow-same-origin allow-forms allow-scripts" width="<?php echo $iframe[0][0]; ?>" height="<?php echo $iframe[0][1]; ?>" seamless></iframe>
+                <h2 class="frame-title">
+                    <span class="meta-width"><?php echo $iframe[0][0]; ?></span>
+                    <span class="meta-delimiter">×</span>
+                    <span class="meta-height"><?php echo $iframe[0][1]; ?></span>
+                    <?php if ($class != 'stretch' && $iframe[1]): ?>
+                    <small><?php echo $iframe[1]; ?>
+                        <?php if ($class == 'viewport'): ?>
+                            <span class="meta-delimiter">-</span>
+                            <?php echo $iframe[2]; ?>
+                        <?php endif; // $class == viewport ?>
+                    </small><?php endif; // $iframe[1] ?>
+                    <button>Reload</button>
+                </h2>
+                <iframe width="<?php echo $iframe[0][0]; ?>" height="<?php echo $iframe[0][1]; ?>" sandbox="allow-same-origin allow-forms allow-scripts" seamless></iframe>
             </div>
 
 <?php } // frame ?>
 
-<?php foreach ($stretch as $iframe): iframe($iframe, 'stretch'); endforeach; ?>
-<?php foreach ($device as $iframe): iframe($iframe, 'device'); endforeach; ?>
-<?php foreach ($viewport as $iframe): iframe($iframe, 'viewport'); endforeach; ?>
+<?php
+    foreach ($viewport as $iframe) :
+        iframe($iframe, 'viewport');
+    endforeach;
+?>
 
         </div>
     </section>
