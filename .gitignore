@@ -1,36 +1,13 @@
-###
 ### everything
-###
-
 /*
 
-###
-### root
-###
-
+### except
 !.git*
 !README.md
 !index.php
 !public/
 
-###
-### processors
-###
-
-.sass-cache
-bower_components
-node_modules
-
-###
-### logs
-###
-
-*.log
-
-###
-### OS generated
-###
-
+### generated
 ._*
 .orig
 .DS_Store*
