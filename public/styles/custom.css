@@ -47,9 +47,19 @@
 
     button,
     input,
-    textarea,
-    select {
+    select,
+    textarea {
         padding: 2px 5px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: relative; top: -1px;
+    }
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+        padding-left: .1em;
     }
 
     button {
@@ -107,15 +117,19 @@
         float: right;
         margin-top: 0; padding: 0 3px 0 9px;
     }
+    #header-form-settings ul {
+    }
+    #header-form-settings li {
+        list-style: none;
+        float: left;
+    }
+    #header-form-settings li + li {
+        margin-left: 0.5em;
+    }
     #header-form-settings label {
         line-height: 31px;
     }
-    #header-form-settings label + label {
-        margin-left: 9px;
-    }
-    #header-form-settings label input {
-        position: relative; top: -1px;
-        margin-right: 2px;
+    #header-form-settings input {
     }
 
     #header-credit {

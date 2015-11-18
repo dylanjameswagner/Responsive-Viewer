@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
     <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=1.0, user-scalable=no"/>
 
-    <title>responsive</title>
+    <title>Responsive Viewer</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="./public/images/favicon.ico"/>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./public/images/apple-touch-icon.png"/>
@@ -27,22 +27,28 @@
 
     <header id="header">
         <form id="header-form" method="post">
-            <p id="header-form-url"><input type="text" placeholder="enter a url"/> <button>Reload All</button></p>
-            <p id="header-form-settings">
-                <label><input type="radio"    id="stretch"  name="view"    value="stretch" checked="checked"/> Stretch</label>
-                <label><input type="radio"    id="viewport" name="view"    value="viewport"/>                  Viewport</label>
-                <label><input type="checkbox" id="reverse"  name="reverse" value="reverse"/>                   Reverse</label>
+            <p id="header-form-url">
+                <input type="text" placeholder="enter a url"/> <button>Reload All</button>
             </p>
+            <ul id="header-form-settings">
+                <li><input type="radio"    id="stretch"  name="view"    value="stretch" checked="checked"/> <label for="stretch">Stretch</label></li>
+                <li><input type="radio"    id="viewport" name="view"    value="viewport"/>                  <label for="viewport">Viewport</label></li>
+                <li><input type="checkbox" id="reverse"  name="reverse" value="reverse"/>                   <label for="reverse">Reverse</label></li>
+            </ul>
         </form>
 
-        <p id="header-credit">A tool based on the work of <a target="_blank" href="http://mattkersley.com">Matt Kersley</a> &raquo; <a target="_blank" href="https://github.com/mattkersley/Responsive-Design-Testing">Github</a></p>
-    </header >
+        <p id="header-credit">
+            <a target="_blank" href="https://github.com/dylanjameswagner/Responsive-Viewer">Github</a>
+            | Inspired by the work of
+            <a target="_blank" href="https://github.com/mattkersley/Responsive-Design-Testing">Matt Kersley</a>
+        </p>
+    </header>
 
     <section id="frames" class="stretch">
         <div id="frames-inner">
 
 <?php include 'frames.php'; ?>
-<?php function iframe($iframe, $class){ ?>
+<?php function iframe($iframe, $class) { ?>
 
             <div class="frame <?php echo $class; ?>">
                 <h2 class="frame-title">
@@ -62,7 +68,6 @@
             </div>
 
 <?php } // frame ?>
-
 <?php
     foreach ($viewport as $iframe) :
         iframe($iframe, 'viewport');
@@ -71,11 +76,6 @@
 
         </div>
     </section>
-
-<!--[if gte IE 9]><!-->
-
-
-<!--<![endif]-->
 
 </body>
 </html>
